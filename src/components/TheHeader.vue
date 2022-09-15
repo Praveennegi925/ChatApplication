@@ -1,6 +1,6 @@
 <template>
   <h1>{{title}}</h1>
-  <div id="container">
+  <div id="header">
     <img :src="url" />
   </div>
 </template>
