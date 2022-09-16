@@ -23,6 +23,7 @@ const name = prompt(" Enter your name to join Chat");
 socket.emit("new-user-joined", name);
 
 
+
 const append = (message, position) => {
   const messageInput = document.querySelector(".container");
   const newElement = document.createElement("div");
@@ -51,3 +52,6 @@ socket.on("user-joined", (name) => {
 socket.on("receive", (data) => {
   append(`${data.name}: ${data.message}`, "left");
 });
+socket.on('leave',(name)=>{
+  Newappend(`${name} : left the Chat`,'right');
+})

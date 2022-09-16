@@ -20,5 +20,12 @@ io.on("connection", (socket) => {
       name: users[socket.id],
     });
   });
+
+ 
+  socket.on("disconnect",(name)=>{
+    name=users[socket.id];
+    socket.broadcast.emit("leave",name);
+    console.log(name);
+  })
 });
   
