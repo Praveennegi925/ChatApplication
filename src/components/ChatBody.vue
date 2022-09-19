@@ -14,22 +14,23 @@
 </template>
 <style >
 input.text {
-  margin-left: 600px;
-  margin-right: auto;
-  margin-top: 10px;
-  height: 50px;
+
+  margin-left:600px ;
+  padding: 10px 20px;
   width: 500px;
   background-color: rgb(217, 226, 226);
   font-size: 20px;
   border-radius: 10px;
+  display: inline-block;
   
 }
 input.send-text {
-  height: 50px;
+  padding: 10px;
   width: 100px;
-  margin-left: 10px;
+  
   border-radius: 10px;
   font-size: 20px;
+  
 }
 
 ::placeholder {
