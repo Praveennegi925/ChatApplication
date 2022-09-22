@@ -1,20 +1,21 @@
 <template>
-  <h1>{{title}}</h1>
-  <div id="header">
-    <img :src="url" />
-  </div>
+  <userslist></userslist>
 </template>
 <script>
+import userslist from "./usersList.vue";
+
 export default {
+  components: { userslist },
   data() {
     return {
       url: require("/home/privatedeal/Documents/chat-application/src/assets/msg.png"),
-      title:'CHAT'
+      title: "CHAT",
     };
   },
 };
 </script>
-<style scoped>
+
+<style>
 h1 {
   color: rgb(4, 11, 11);
   text-align: center;
@@ -27,3 +28,4 @@ img {
   margin-right: auto;
 }
 </style>
+    

@@ -1,6 +1,9 @@
 <template>
-  <the-header></the-header>
-  <chat-body></chat-body>
+  <div class="container-fluid" style="display: flex;">
+    <the-header></the-header>
+    <chat-body></chat-body>
+  </div>
+ 
 </template>
 
 <script>
