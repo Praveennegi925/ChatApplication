@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       url: require("/home/privatedeal/Documents/chat-application/src/assets/msg.png"),
-      title: "CHAT",
+      title: "CHAT APP",
     };
   },
 };

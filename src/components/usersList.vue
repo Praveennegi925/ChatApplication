@@ -1,16 +1,18 @@
 <template>
   <div class="sidebar">
-    <h1>USERS</h1>
+    <h1>USERS ONLINE</h1>
   </div>
 </template>
 
 <style >
+h1{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 .sidebar {
   width: 250px;
   padding-left: 20px;
   padding-right: 20px;
   background-color: lightpink;
-  background-image: url('/src/assets/vintage.jpg');
   height: 934px;
   
 }

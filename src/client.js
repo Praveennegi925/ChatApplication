@@ -109,7 +109,7 @@ const addUser=(name)=>{
   const newElement=document.createElement("p");
   newElement.classList.add('para');
   newElement.classList.add('removeOnline');   //just for target 
-  newElement.innerHTML=`${name}   <span class="dot"></span>`;
+  newElement.innerHTML=`${name} <span class="dot"></span>`;
   element.append(newElement);
 }
 
