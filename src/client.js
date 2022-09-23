@@ -88,7 +88,19 @@ const typing = (name) => {
 
 const removeTyping = () => {
   document.querySelector(".typing").remove();
-};
+}; 
+
+//online and offline on Dom:-
+// const newJoin="Online";
+
+
+// removing online when user leave the chat:-
+
+const RemoveOnline=()=>{
+  document.querySelector('.removeOnline').remove();
+}
+
+
 
 // Addding userlist:-
 
@@ -96,9 +108,12 @@ const addUser=(name)=>{
   const element = document.querySelector(".sidebar");
   const newElement=document.createElement("p");
   newElement.classList.add('para');
-  newElement.innerText=`${name} Online `;
+  newElement.classList.add('removeOnline');   //just for target 
+  newElement.innerHTML=`${name}   <span class="dot"></span>`;
   element.append(newElement);
 }
+
+
 
 //Listening all the events emitted by node  server:-
 
@@ -113,6 +128,8 @@ socket.on("receive", (data) => {
 
 socket.on("leave", (name) => {
   leaved(`${name} : left the Chat`, "right");
+  RemoveOnline();
+
 });
 
 socket.on("typingEvent", (name) => {
