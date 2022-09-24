@@ -12,8 +12,9 @@ h1{
   width: 250px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: lightpink;
+  background-color: rgb(240, 99, 120);
   height: 934px;
+  border-radius:20px ;
   
 }
 
@@ -24,6 +25,7 @@ h1{
   padding-right: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
+  border-radius: 10px;
 }
 .dot {
   height: 20px;
