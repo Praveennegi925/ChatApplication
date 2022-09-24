@@ -69,7 +69,7 @@ input.send-text {
   border-radius: 10px;
   background-color: rgb(150, 250, 216);
   padding: 10px;
-  height: 400px;
+  height: 500px;
   width: auto;
   overflow-y: auto ;
   margin-bottom: 10px;
