@@ -5,8 +5,8 @@
 </template>
 
 <style >
-h1 {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+h1{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .sidebar {
   width: 250px;
@@ -14,16 +14,17 @@ h1 {
   padding-right: 20px;
   background-color: rgb(240, 99, 120);
   height: 934px;
-  border-radius: 20px;
-  overflow-y: auto;
+  border-radius:20px ;
+    overflow-y: auto ;
+  
 }
 
 .para {
   font-size: 30px;
   background-color: rgb(150, 250, 216);
-  padding-left: 10px;
+  padding-left: 12px;
   padding-right: 10px;
-  padding-top: 10px;
+  padding-top: 12px;
   padding-bottom: 10px;
   border-radius: 10px;
 }

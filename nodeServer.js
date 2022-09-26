@@ -28,9 +28,12 @@ io.on("connection", (socket) => {
     socket.broadcast.emit("removetypingEvent");
   });
 
+  // we  are not emitting  disconnect it is build in :-
+  
   socket.on("disconnect", (name) => {
     name = users[socket.id];
     socket.broadcast.emit("leave", name);
+    socket.broadcast.emit("Remove-Online",name);
     delete users[socket.id];
   });
 });

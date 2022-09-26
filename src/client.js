@@ -24,7 +24,7 @@ window.onload = function () {
   // typing event listener:-
 
   messageInput.addEventListener("focus", () => {
-    console.log("hey");
+
     socket.emit("typing", name);
   });
 
@@ -76,7 +76,7 @@ const leaved = (message, position) => {
 //typing functionality:-
 
 const typing = (name) => {
-  console.log('hey')
+
   const element = document.querySelector(".chat-box");
   const newElement = document.createElement("div");
   newElement.classList.add("type");
@@ -90,15 +90,15 @@ const removeTyping = () => {
   document.querySelector(".typing").remove();
 }; 
 
-//online and offline on Dom:-
-// const newJoin="Online";
+
 
 
 // removing online when user leave the chat:-
 
-const RemoveOnline=()=>{
-  document.querySelector('.removeOnline').remove();
-}
+const RemoveOnline=(name)=>{
+  document.querySelector("."+`${name}`).remove();
+ 
+};
 
 
 
@@ -108,7 +108,7 @@ const addUser=(name)=>{
   const element = document.querySelector(".sidebar");
   const newElement=document.createElement("p");
   newElement.classList.add('para');
-  newElement.classList.add('removeOnline');   //just for target 
+  newElement.classList.add(`${name}`);   //just for target 
   newElement.innerHTML=`${name} <span class="dot"></span>`;
   element.append(newElement);
 }
@@ -127,8 +127,7 @@ socket.on("receive", (data) => {
 });
 
 socket.on("leave", (name) => {
-  leaved(`${name} : left the Chat`, "right");
-  RemoveOnline();
+    leaved(`${name} : left the Chat`, "right");
 
 });
 
@@ -138,6 +137,7 @@ socket.on("typingEvent", (name) => {
 socket.on("removetypingEvent", () => {
   removeTyping();
 });
-socket.on("Userlist",()=>{
-  addUser();
+
+socket.on("Remove-Online",(name)=>{
+  RemoveOnline(name);
 })
