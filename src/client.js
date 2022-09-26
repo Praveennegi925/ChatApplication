@@ -109,6 +109,16 @@ const addUser=(name)=>{
   const newElement=document.createElement("p");
   newElement.classList.add('para');
   newElement.classList.add(`${name}`);   //just for target 
+  newElement.innerHTML=`${name}  <span class="dot"></span>`;
+  element.append(newElement);
+}
+
+// already joined user will we shown to to dom for new joiner:-
+const addUser2=(name)=>{
+  const element = document.querySelector(".sidebar");
+  const newElement=document.createElement("p");
+  newElement.classList.add('para');
+  newElement.classList.add(`${name}`);   //just for target 
   newElement.innerHTML=`${name} <span class="dot"></span>`;
   element.append(newElement);
 }
@@ -120,6 +130,9 @@ const addUser=(name)=>{
 socket.on("user-joined", (name) => {
   join(`${name} joined the chat`, "right");
   addUser(name);
+});
+socket.on("allready-joined", (name) => {
+  addUser2(name);
 });
 
 socket.on("receive", (data) => {
