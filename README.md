@@ -1,5 +1,5 @@
 # chat-application
- Technologies use are vuejs, nodejs, socketIO
+ Technologies used are vuejs, nodejs, socketIO
 ## Project setup
 ```
 npm install
